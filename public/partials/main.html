@@ -1,0 +1,9 @@
+<p ng-show="mensagem.length" class="alert alert-primary">{{mensagem}}</p>
+<filtro></filtro>
+<br>
+<div class="row">
+    <card class="col-md-3 card-animado" ng-repeat="musica in musicas | filter: filtro" musica="musica">
+        <a class="btn btn-primary btn-block" href="/musicas/editar/{{musica._id}}">Editar</a>
+        <button class="btn btn-danger btn-block" ng-click="remover(musica)">Remover</button>
+    </card>
+</div>

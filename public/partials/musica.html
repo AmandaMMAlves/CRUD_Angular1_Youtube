@@ -1,0 +1,31 @@
+<p class="alert alert-primary" ng-show="mensagem.length">{{mensagem}}</p>
+<form novalidate name="formulario" class="row" ng-submit="submeter()">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Título</label>
+            <input class="form-control" name="titulo" ng-model="musica.titulo" required>
+            <span ng-show="formulario.$submitted && formulario.titulo.$error.required">
+                Título Obrigatório
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Foto do Álbum</label>
+            <input class="form-control" name="url" ng-model="musica.url" required>
+            <span ng-show="formulario.$submitted && formulario.url.$error.required">
+                Imagem Obrigatória
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Banda</label>
+            <input class="form-control" name="banda" ng-model="musica.banda" required>
+            <span ng-show="formulario.$submitted && formulario.banda.$error.required">
+                Banda Obrigatória
+            </span>
+        </div>
+        <button class="btn btn-primary" type="submit">Salvar</button>
+        <a class="btn btn-primary" href="/" foco>Voltar</a>
+    </div>
+    <div class="col-md-6">
+        <imagem titulo="{{musica.titulo}}" url="{{musica.url}}"></imagem>
+    </div>
+</form>

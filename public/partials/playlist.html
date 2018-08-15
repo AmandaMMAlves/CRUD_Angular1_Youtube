@@ -1,0 +1,27 @@
+<p class="alert alert-primary" ng-show="mensagem.lenght">{{mensagem}}</p>
+<div class="row">
+    <div class="col-md-6">
+        <div class="video" >
+            <h1>{{videoid}}</h1>
+            <youtube width="{{yt.width}}" height="{{yt.height}}" videoid="{{yt.videoid}}"></youtube>
+            <p>Player status is: {{yt.playerStatus}}</p>
+        </div>
+    </div>
+    <div class="col-md-6 table-overflow" >
+        <table class="table table-hover " >
+            <tr ng-repeat="musica in musicas" class="pointer" ng-click="youtube(musica)">
+                <td>{{musica.titulo}} - {{musica.banda}}</td>
+                <td>
+                    <img class="rounded" width="80" height="80" src='{{musica.url}}' alt="{{musica.titulo}}">
+                </td>                 
+            </tr> 
+        </table>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-primary float-right btn-spacing" href="/" foco>Voltar</a>
+    </div>
+    
+</div>
